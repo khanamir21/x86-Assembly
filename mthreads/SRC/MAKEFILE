@@ -1,0 +1,17 @@
+TCDIR=C:\TC31
+TCLIB=$(TCDIR)\lib
+TCINC=$(TCDIR)\include
+TCBIN=$(TCDIR)\bin
+IDIR =..\include
+
+CC=$(TCBIN)\tcc
+CFLAGS=-I$(TCINC)
+
+example: $(OBJ)
+	$(CC) -eEXAMPLE -L$(TCLIB) -I$(TCINC) thread.cpp main.cpp
+	del *.OBJ
+
+clean:
+	del *.OBJ 
+	del *.EXE
+

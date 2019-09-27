@@ -1,0 +1,15 @@
+Implement multithreading under DOS
+       The program is debugged under Turbo C 3.0. It adopts the simplest time slice 
+rotation method to realize multi-threaded system. The program uses the most simple 
+technology to realize multi-tasking system. It mainly uses setjmp in C standard library. 
+And longjmp two functions, most of the programs are written in C / C + + language, but 
+still inevitably used three inline assembly to switch the thread stack. Because of 
+the system call under DOS, it is not reentrant. If the DOS system call is called in 
+multiple threads at the same time, there will be problems such as crashes. 
+Semaphores can generally be used to solve DOS reentry problems. The entire system 
+uses a clock interrupt handler to complete the scheduling of tasks.
+
+Copyright statement: This article is the original article of CSDN blogger "tftjt", 
+following the CC 4.0 BY-SA copyright agreement, please reprint the original source 
+link and this statement.
+Original link: https://blog.csdn.net/tftjt/article/details/6081630
